@@ -9,6 +9,7 @@ import jwt_decode from 'jwt-decode';
 import Home from './components/pages/Home';
 import NavBar from './components/partials/NavBar';
 import Register from './components/pages/Users/Register';
+import Upload from './components/pages/Upload'
 import NotFound from './components/pages/NotFound';
 
 
@@ -65,6 +66,13 @@ function App() {
                 currentUser={currentUser} 
                 setCurrentUser={setCurrentUser}
               />} 
+            />
+
+            <Route 
+              path='/post'
+              element={<Upload 
+                currentUser={currentUser}
+              />}
             />
 
             <Route 
