@@ -11,6 +11,7 @@ import NavBar from './components/partials/NavBar';
 import Register from './components/pages/Users/Register';
 import Upload from './components/pages/Upload'
 import NotFound from './components/pages/NotFound';
+import Profile from "./screens/Profile/Profile"
 
 
 
@@ -69,6 +70,13 @@ function App() {
             />
 
             <Route 
+              path='/profile' 
+              element={<Profile 
+                currentUser={currentUser} 
+                setCurrentUser={setCurrentUser}
+              />} 
+            />  
+            <Route
               path='/post'
               element={<Upload 
                 currentUser={currentUser}
@@ -77,8 +85,9 @@ function App() {
 
             <Route 
               path='*'
-              element={<NotFound />}
-              />
+              element={<NotFound 
+              />}
+            />
 
           </Routes>
         </div>
