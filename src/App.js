@@ -10,6 +10,7 @@ import Home from './components/pages/Home';
 import NavBar from './components/partials/NavBar';
 import Register from './components/pages/Users/Register';
 import NotFound from './components/pages/NotFound';
+import Profile from "./screens/Profile/Profile"
 
 
 
@@ -66,6 +67,14 @@ function App() {
                 setCurrentUser={setCurrentUser}
               />} 
             />
+
+            <Route 
+              path='/profile' 
+              element={<Profile 
+                currentUser={currentUser} 
+                setCurrentUser={setCurrentUser}
+              />} 
+            />  
 
             <Route 
               path='*'
