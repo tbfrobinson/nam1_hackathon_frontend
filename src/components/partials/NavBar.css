@@ -1,6 +1,16 @@
 .Nav {
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* display: inline-block; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
 }
 .logo {
     width: 15%;
@@ -8,6 +18,14 @@
     border-radius: 50%;
     margin-top: 10px;
     align-self: center;
+}
+
+.profile {
+    float: right;
+}
+
+.dropdown {
+    width: fit-content;
 }
 
 #dropdown-basic::after {
