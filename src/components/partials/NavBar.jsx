@@ -34,12 +34,15 @@ export default function NavBar({currentUser, handleLogout}) {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    <Dropdown.Item> <Link to="/">Home</Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/profile">Profile</Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/dog">Dog Community</Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/cat">Cat Community </Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/fish">Fish Community </Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/bird">Bird Community </Link> </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-            <Link to='/'> <img className = "logo" src = {Logo} alt = "Logo of tree"/></Link>
+            <Link to='/'> <img className = "logo" src = {Logo} alt = "Logo of a dog"/></Link>
             <Link to="/profile"><img className = "profile" src = {Profile} alt = "Profile"/> </Link>
             {/* {currentUser ? loggedIn : loggedOut} */}
         </div>

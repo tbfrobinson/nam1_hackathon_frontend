@@ -1,0 +1,64 @@
+.searchContainer  {
+    text-align: center;
+}
+
+.searchBar {
+    height: 40px;
+    width:75%;
+    max-width: 550px;
+    font-size: 14px;
+    background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: none;
+    border-radius: 10px;
+}
+.homeImage {
+    text-align: center;
+    margin-top: 10px;
+}
+.cats {
+    width: 90%;
+    border-radius: 8px;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.categories {
+    display:flex;
+    overflow-x: auto;
+}
+
+/* centers the categories after screen width is 500px  */
+@media only screen and (min-width: 500px) {
+    .categories {
+      justify-content: center;
+    }
+  }
+
+.categories div {
+    margin-left: 15px;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+  }
+
+.categoryImg {
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    border: 2px solid black;
+
+  }
+  .categoryDiv {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+  }
+  .caption {
+    display: block;
+  }

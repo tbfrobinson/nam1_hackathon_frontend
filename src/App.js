@@ -9,10 +9,13 @@ import jwt_decode from 'jwt-decode';
 import Home from './components/pages/Home';
 import NavBar from './components/partials/NavBar';
 import Register from './components/pages/Users/Register';
-import Upload from './components/pages/Upload'
+import Upload from './components/pages/Upload';
 import NotFound from './components/pages/NotFound';
-import Profile from "./screens/Profile/Profile"
-
+import Profile from "./screens/Profile/Profile";
+import DogPage from "./components/pages/DogPage/DogPage";
+import CatPage from "./components/pages/CatPage/CatPage";
+import FishPage from "./components/pages/FishPage/FishPage"
+import BirdPage from "./components/pages/BirdPage/BirdPage"
 
 
 function App() {
@@ -82,6 +85,26 @@ function App() {
                 currentUser={currentUser}
               />}
             />
+
+            <Route
+              path='/dog'
+              element={<DogPage />}
+            />  
+
+            <Route
+              path='/cat'
+              element={<CatPage />}
+            />  
+
+            <Route
+              path='/fish'
+              element={<FishPage />}
+            />  
+
+            <Route
+              path='/bird'
+              element={<BirdPage />}
+            />  
 
             <Route 
               path='*'
