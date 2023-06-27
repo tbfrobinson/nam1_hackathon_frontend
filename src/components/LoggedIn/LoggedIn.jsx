@@ -1,5 +1,6 @@
 export default function LoggedIn({ currentUser, handleLogout }) {
 
+    console.log(currentUser)
 
     return ( 
         <>
