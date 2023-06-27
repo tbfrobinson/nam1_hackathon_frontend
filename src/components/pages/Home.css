@@ -27,10 +27,15 @@
     max-height: 300px;
 }
 
+p {
+    text-align: center;
+}
+
 .categories {
     display:flex;
     overflow-x: auto;
 }
+
 
 /* centers the categories after screen width is 500px  */
 @media only screen and (min-width: 500px) {
