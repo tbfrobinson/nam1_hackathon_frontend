@@ -14,7 +14,7 @@ export default function BirdPage() {
         getPosts()
     }, [])  //run on 1st render only
 
-
+    
 
   return (
     <div>Bird Page</div>
