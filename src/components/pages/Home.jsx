@@ -80,6 +80,11 @@ const postList = post ?  post.slice(-2).reverse().map((posts, index) => <PostCar
             <hr/>
 
             <div className="recentTitle"> <h5>Recent Community Posts</h5> </div>
+            <div className="createPost" style={{'text-align': 'center'}}>
+                    <Link to="/post">
+                        CREATE A POST
+                    </Link>
+                </div>
             <div className="homePostBox">
                 {post && postList}
             </div>

@@ -33,7 +33,7 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
     <>
     <div className="profileContainer"> 
     <h1>Profile</h1>
-    {currentUser ? <LoggedIn currentUser={currentUser} handleLogout={handleLogout}/> : loggedOut}
+        {currentUser ? <LoggedIn currentUser={currentUser} handleLogout={handleLogout}/> : loggedOut}
     </div>
     </>
   )

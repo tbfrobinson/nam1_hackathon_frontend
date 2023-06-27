@@ -22,7 +22,7 @@ export default function LoggedIn({ currentUser, handleLogout }) {
 //const postList = post ?  post.map((posts, index) => <PostCard posts={posts} key={index} />) : ""
 
 //maps post based on current users posts
-const postCategory = post ? post.filter(posts => posts.userId.username === currentUser.decoded.username).map((posts, index) => <PostCard posts={posts} key={index} />) : ""
+const postCategory = post ? post.filter(posts => posts.userId.username === currentUser.username).map((posts, index) => <PostCard posts={posts} key={index} />) : ""
 
 
 // const currentUserName = currentUser.decoded.username  || currentUser.username + "regular"
@@ -32,10 +32,10 @@ const postCategory = post ? post.filter(posts => posts.userId.username === curre
     return ( 
         <>
         <div className="username">
-            Username: {currentUser.decoded.username}  
+            Username: {currentUser.username}  
         </div>
         <div className="email">
-            Email: {currentUser.decoded.email}
+            Email: {currentUser.email}
         </div>
         <button onClick={handleLogout}> 
             Log Out
