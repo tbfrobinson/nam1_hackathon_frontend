@@ -30,7 +30,7 @@ export default function Register({ currentUser, setCurrentUser }) {
 
             const decoded = jwt_decode(token)
 
-            setCurrentUser({ decoded })
+            setCurrentUser(decoded)
 
             return redirect('/')
         } catch (error) {
