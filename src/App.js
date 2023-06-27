@@ -77,6 +77,7 @@ function App() {
               element={<Profile 
                 currentUser={currentUser} 
                 setCurrentUser={setCurrentUser}
+                handleLogout={handleLogout} 
               />} 
             />  
             <Route

@@ -1,25 +1,40 @@
 import React from 'react'
+import "./Profile.css"
 //register form page
 import Register from "../../components/pages/Users/Register"
+import LoggedIn from "../../components/LoggedIn/LoggedIn"
 
-export default function Profile({currentUser}) {
+export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 
-    const loggedIn = (
-        <div>
-            You are Logged In
+
+    const loggedIn = 
+    (
+        <>
+        <div className="username">
+            Username: 
         </div>
+        <div className="email">
+            Email: 
+        </div>
+        <button onClick={handleLogout}> 
+            Log Out
+        </button>
+        </>
     )
+
 
     const loggedOut = (
-        <div>
-            You are Logged Out
-            <Register />
-        </div>
+        <Register currentUser={currentUser} setCurrentUser={setCurrentUser}/>
     )
+
+
+
   return (
     <>
-    <div>Profile Page</div>
-    {currentUser ? loggedIn : loggedOut}
+    <div className="profileContainer"> 
+    <h1>Profile</h1>
+    {currentUser ? <LoggedIn currentUser={currentUser} handleLogout={handleLogout}/> : loggedOut}
+    </div>
     </>
   )
 }

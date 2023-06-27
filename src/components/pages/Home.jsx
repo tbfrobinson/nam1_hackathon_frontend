@@ -39,7 +39,7 @@ export default function Home() {
             </div>
 
             <hr />  
-
+            <p>Choose Your Pet Community</p>
             <div className="categories">
                 <div className="categoryDiv">
                     <Link to="/dog"> <img className="categoryImg" src={Dog} alt="Dog"/> </Link>
