@@ -1,16 +1,16 @@
 import axios from 'axios'
 import { useState } from 'react'
 import "./Upload.css"
+import { redirect } from 'react-router-dom'
 
 export default function Upload({ currentUser }) {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-    const [pet, setPet] = useState('')
+    const [pet, setPet] = useState('Dog')
     const [image, setImage] = useState('')
 
     const handleSubmit = async e => {
         e.preventDefault()
-        console.log(currentUser)
         try {
             const formData = new FormData()
 
@@ -19,10 +19,7 @@ export default function Upload({ currentUser }) {
             formData.append('image', image)
             formData.append('content', content)
             formData.append('petType', pet)
-                
             const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/posts`, formData)
-            console.log(response.data)
-
         } catch(err) {
             console.log(err)
         }
