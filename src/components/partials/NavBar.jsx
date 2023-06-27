@@ -20,7 +20,7 @@ export default function NavBar({currentUser, handleLogout}) {
 
     const loggedOut = (
         <div>
-            <Link to='/register'>Register</Link>
+            <Link to='/register' className="dpLink">Register</Link>
         </div>
     )
 
@@ -32,18 +32,20 @@ export default function NavBar({currentUser, handleLogout}) {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item> <Link to="/">Home</Link> </Dropdown.Item>
-                    <Dropdown.Item> <Link to="/profile">Profile</Link> </Dropdown.Item>
-                    <Dropdown.Item> <Link to="/dog">Dog Community</Link> </Dropdown.Item>
-                    <Dropdown.Item> <Link to="/cat">Cat Community </Link> </Dropdown.Item>
-                    <Dropdown.Item> <Link to="/fish">Fish Community </Link> </Dropdown.Item>
-                    <Dropdown.Item> <Link to="/bird">Bird Community </Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/" className="dpLink">Home</Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/profile" className="dpLink">Profile</Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/dog" className="dpLink">Dog Community</Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/cat" className="dpLink">Cat Community </Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/fish" className="dpLink">Fish Community </Link> </Dropdown.Item>
+                    <Dropdown.Item> <Link to="/bird" className="dpLink">Bird Community </Link> </Dropdown.Item>
                     <Dropdown.Item> {currentUser ? loggedIn : loggedOut } </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-            <Link to='/'> <img className = "logo" src = {Logo} alt = "Logo of a dog"/></Link>
+            <Link to='/' className="title"> Pet Parents </Link>
             <Link to="/profile"><img className = "profile" src = {Profile} alt = "Profile"/> </Link>
             {/* {currentUser ? loggedIn : loggedOut} */}
         </div>
     )
 }
+
+{/* <img className = "logo" src = {Logo} alt = "Logo of a dog"/> */}

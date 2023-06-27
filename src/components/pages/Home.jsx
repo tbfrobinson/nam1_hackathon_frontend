@@ -1,5 +1,7 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import { Link } from 'react-router-dom';
+import axios from "axios"
+import PostCard from "../PostCard/PostCard"
 //import css for the Home page
 import "./Home.css"
 //import images
@@ -19,6 +21,22 @@ export default function Home() {
         e.preventDefault();
         setSearchInput(e.target.value)
     }
+
+
+    const [post, setPosts] = useState([])
+    
+    //gets all posts
+    useEffect(function () {
+        async function getPosts() {
+            const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/posts`)
+            //console.log(response.data)
+            setPosts(response.data)
+        }
+        getPosts()
+    }, [])  //run on 1st render only
+
+// maps the last 2 post from newest to oldest
+const postList = post ?  post.slice(-2).reverse().map((posts, index) => <PostCard posts={posts} key={index} />) : ""
 
 
     return ( 
@@ -60,6 +78,11 @@ export default function Home() {
             </div>
 
             <hr/>
+
+            <div className="recentTitle"> <h5>Recent Community Posts</h5> </div>
+            <div className="homePostBox">
+                {post && postList}
+            </div>
 
         </>
     )

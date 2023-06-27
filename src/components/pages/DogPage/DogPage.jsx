@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios"
 import PostCard from "../../PostCard/PostCard"
+import "./DogPage.css"
 
 export default function DogPage() {
 
@@ -28,7 +29,7 @@ const postCategory = post ? post.filter(posts => posts.petId.category === "Dog")
     <>
       <div> Dog Page </div>
      
-      <div>
+      <div className="dogPostBox">
         {post && postCategory}
       </div>
 
