@@ -38,10 +38,12 @@ export default function Upload({ currentUser }) {
                     id='image'
                     onChange={e => setImage(e.target.files[0])}
                     />
+                <label>Select a category: </label>
                 <select id='petType' onChange={e => setPet(e.target.value)}>
-                    <option value=''>Select a category</option>
                     <option value='Dog'>Dog</option>
                     <option value='Cat'>Cat</option>
+                    <option value='Bird'>Bird</option>
+                    <option value='Fish'>Fish</option>
                 </select>
                 <input 
                     type='text'
