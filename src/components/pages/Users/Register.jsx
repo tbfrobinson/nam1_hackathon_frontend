@@ -54,7 +54,7 @@ export default function Register({ currentUser, setCurrentUser }) {
             const { token } = response.data
             localStorage.setItem('token', token)
             const decoded = jwt_decode(token)
-            setCurrentUser({decoded})
+            setCurrentUser(decoded)
             return redirect('/')
         } catch(err) {
             console.log(err)
