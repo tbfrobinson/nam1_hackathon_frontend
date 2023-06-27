@@ -14,14 +14,12 @@ export default function NavBar({currentUser, handleLogout}) {
 
     const loggedIn = (
         <div>
-            <button onClick={handleLogout}>Log Out</button>
+            <span onClick={handleLogout}>Log Out</span>
         </div>
     )
 
     const loggedOut = (
         <div>
-            <Link to='/'>Home</Link>           
-            <span>      |     </span>    
             <Link to='/register'>Register</Link>
         </div>
     )
@@ -40,6 +38,7 @@ export default function NavBar({currentUser, handleLogout}) {
                     <Dropdown.Item> <Link to="/cat">Cat Community </Link> </Dropdown.Item>
                     <Dropdown.Item> <Link to="/fish">Fish Community </Link> </Dropdown.Item>
                     <Dropdown.Item> <Link to="/bird">Bird Community </Link> </Dropdown.Item>
+                    <Dropdown.Item> {currentUser ? loggedIn : loggedOut } </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
             <Link to='/'> <img className = "logo" src = {Logo} alt = "Logo of a dog"/></Link>
