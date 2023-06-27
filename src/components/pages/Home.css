@@ -36,6 +36,12 @@ p {
     overflow-x: auto;
 }
 
+.homePostBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* centers the categories after screen width is 500px  */
 @media only screen and (min-width: 500px) {
@@ -67,3 +73,9 @@ p {
   .caption {
     display: block;
   }
+
+.recentTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

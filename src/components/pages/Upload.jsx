@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react'
+import "./Upload.css"
 
 export default function Upload({ currentUser }) {
     const [title, setTitle] = useState('')
@@ -28,8 +29,9 @@ export default function Upload({ currentUser }) {
     }
 
     return (
-        <div>
+        <div className="postFormContainer">
             <form 
+            className="postForm"
                 onSubmit={handleSubmit}
                 encType='multipart/form-data'
             >

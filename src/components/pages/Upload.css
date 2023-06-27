@@ -1,0 +1,14 @@
+.postFormContainer {
+    border: 5px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.formPost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,7 +1,7 @@
 .Nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content:space-between;
     /* display: inline-block; */
     flex-direction: row;
     flex-wrap: nowrap;
@@ -12,6 +12,13 @@ a {
     justify-content: center;
     width: fit-content;
 }
+
+.title {
+    text-decoration: none;
+    color:rgb(169, 103, 231);
+    font-size: 2rem;
+}
+
 .logo {
     width: 15%;
     height: 15%;
@@ -26,8 +33,14 @@ a {
 
 .dropdown {
     width: fit-content;
+    margin-top: -10px;
 }
 
 #dropdown-basic::after {
     content: none;
+}
+
+.dpLink {
+    text-decoration: none;
+    color: black;
 }

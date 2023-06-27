@@ -1,11 +1,38 @@
+import React, {useEffect, useState} from 'react'
+import axios from "axios"
+import PostCard from "../PostCard/PostCard"
+
 export default function LoggedIn({ currentUser, handleLogout }) {
 
-    console.log(currentUser)
+    //console.log(currentUser)
+
+    const [post, setPosts] = useState([])
+    
+    //gets all posts
+    useEffect(function () {
+        async function getPosts() {
+            const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/posts`)
+            console.log(response.data)
+            setPosts(response.data)
+        }
+        getPosts()
+    }, [])  //run on 1st render only
+
+// maps all posts
+//const postList = post ?  post.map((posts, index) => <PostCard posts={posts} key={index} />) : ""
+
+//maps post based on current users posts
+const postCategory = post ? post.filter(posts => posts.userId.username === currentUser.decoded.username).map((posts, index) => <PostCard posts={posts} key={index} />) : ""
+
+
+// const currentUserName = currentUser.decoded.username  || currentUser.username + "regular"
+// console.log(currentUserName)
+
 
     return ( 
         <>
         <div className="username">
-            Username: {currentUser.decoded.username}
+            Username: {currentUser.decoded.username}  
         </div>
         <div className="email">
             Email: {currentUser.decoded.email}
@@ -13,6 +40,10 @@ export default function LoggedIn({ currentUser, handleLogout }) {
         <button onClick={handleLogout}> 
             Log Out
         </button>
+
+        {post && postCategory}
+      
+
         </>
     )
 }

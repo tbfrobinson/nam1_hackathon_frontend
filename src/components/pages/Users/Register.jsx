@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Navigate, redirect } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
+import "./Register.css"
 
 
 export default function Register({ currentUser, setCurrentUser }) {
@@ -68,8 +69,8 @@ export default function Register({ currentUser, setCurrentUser }) {
     }
 
     const register = (
-        <div>
-            <form onSubmit={handleRegister}>
+        <div className="SignUp">
+            <form className="formSignUp" onSubmit={handleRegister}>
                 <input 
                     type="text"
                     id='username'
@@ -98,8 +99,8 @@ export default function Register({ currentUser, setCurrentUser }) {
     )
 
     const login = (
-        <div>
-            <form onSubmit={handleLogin}>
+        <div className="LogIn">
+            <form className="formLogIn" onSubmit={handleLogin}>
                 <input 
                     type="text"
                     id='username'
