@@ -2,7 +2,7 @@ import React from 'react'
 import "./PostCard.css"
 
 export default function HomePage({posts}) {
-  console.log(posts)
+  console.log(posts.createdAt)
   return (
     <>
     
