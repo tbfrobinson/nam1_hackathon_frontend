@@ -27,10 +27,12 @@ const postCategory = post ? post.filter(posts => posts.petId.category === "Dog")
 
   return (
     <>
-      <div> Dog Page </div>
+      <div className='communityTitle'> Dog </div>
      
-      <div className="dogPostBox">
-        {post && postCategory}
+      <div className='outerPostBox'>
+        <div className="dogPostBox">
+          {post && postCategory}
+        </div>
       </div>
 
 

@@ -1,14 +1,79 @@
 .postFormContainer {
-    border: 5px solid red;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 .formPost {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.topBar {
+    padding: 10px;
+    height: 40px;
+    width: 90%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+.back {
+    margin-left: 8px;
+}
+.petType {
+    font-size: 30px;
+    border: none;
+}
+.communitySeparator {
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.title {
+    margin-top: 4px;
+    width: 80%;
+    font-size: 20px;
+    border: none;
+}
+.titleSeparator {
+    height: 50px;
+    padding-left: 2px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.content {
+    font-size: 14px;
+    width: 100%;
+    padding: 8px;
+    margin-left: -5px;
+    height: 130px;
+    border: none;
+}
+.contentSeparator {
+    padding-left: 16px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.imageUpload {
+    border: none;
+    width: 80%;
+    margin-left: 29px;
+}
+.submit {
+    position: absolute;
+    top: 74px;
+    right: 23px;
+    border: none; 
+    border-radius: 12px;
+    width: 60px; height: 30px;
+}
+.submit:hover {
+    background-color: rgba(46, 2, 46, 0.5);
 }

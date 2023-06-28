@@ -8,7 +8,7 @@ export default function HomePage({posts}) {
     
     <div className="postBox">
       {/* <h5>{posts.userId.username}</h5> */}
-      <h6>{posts.title}</h6>
+      <h6><strong>{posts.title}</strong></h6>
       <p>{posts.content}</p>
     </div>
     

@@ -9,6 +9,7 @@ export default function Register({ currentUser, setCurrentUser }) {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [checkPassword, setCheckPassword] = useState('')
     const [msg, setMsg] = useState('')
     const [loginRegister, setLoginRegister] = useState(false)
 
@@ -22,7 +23,8 @@ export default function Register({ currentUser, setCurrentUser }) {
             const form = {
                 username,
                 email,
-                password
+                password,
+                checkPassword
             }
             const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/users/register`, form)
             const { token } = response.data
@@ -66,6 +68,9 @@ export default function Register({ currentUser, setCurrentUser }) {
 
     const changeLoginRegister = () => {
         setLoginRegister(!loginRegister)
+        setMsg('')
+        setPassword('')
+        setCheckPassword('')
     }
 
     const register = (
@@ -90,6 +95,13 @@ export default function Register({ currentUser, setCurrentUser }) {
                     id='password'
                     placeholder="Password" 
                     onChange={e => setPassword(e.target.value)}
+                    required
+                    />
+                <input 
+                    type="password" 
+                    id='checkPassword'
+                    placeholder="Please Re-enter password" 
+                    onChange={e => setCheckPassword(e.target.value)}
                     required
                     />
                 <button className="AuthSubmitBtn">Sign Up</button>
@@ -128,7 +140,9 @@ export default function Register({ currentUser, setCurrentUser }) {
 
     return ( 
         <div>
-            <h3>{msg}</h3>
+            <div className='msgDiv'>
+                <h3 className='msg'>{msg}</h3>
+            </div>
             {loginRegister ? login : register}
         </div>
     )
