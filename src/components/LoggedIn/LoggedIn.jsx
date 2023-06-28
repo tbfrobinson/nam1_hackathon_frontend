@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios"
 import PostCard from "../PostCard/PostCard"
+import "./LoggedIn.css"
 
 export default function LoggedIn({ currentUser, handleLogout }) {
 
@@ -37,9 +38,12 @@ const postCategory = post ? post.filter(posts => posts.userId.username === curre
         <div className="email">
             Email: {currentUser.decoded.email}
         </div>
-        <button onClick={handleLogout}> 
+        <button className="LogOutBtn" onClick={handleLogout}> 
             Log Out
         </button>
+
+
+        <div className="myPostTitle"><h5>My Posts</h5></div>
 
         {post && postCategory}
       

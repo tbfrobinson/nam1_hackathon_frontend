@@ -92,9 +92,9 @@ export default function Register({ currentUser, setCurrentUser }) {
                     onChange={e => setPassword(e.target.value)}
                     required
                     />
-                <button>Submit</button>
+                <button className="AuthSubmitBtn">Sign Up</button>
             </form>
-            <button onClick={changeLoginRegister}>Already have an account? </button>
+            <button className="changeLogIn" onClick={changeLoginRegister}>Already have an account? <span className="LogInSpan">LogIn</span> </button>
         </div>
     )
 
@@ -115,9 +115,9 @@ export default function Register({ currentUser, setCurrentUser }) {
                     onChange={e => setPassword(e.target.value)}
                     required
                     />
-                <button>Submit</button>
+                <button className="AuthSubmitBtn">Log In</button>
             </form>
-            <button onClick={changeLoginRegister}>Need to make an account? </button>
+            <button className="changeSignUp" onClick={changeLoginRegister}>Need to make an account? <span className="SignUpSpan">Sign Up </span></button>
         </div>
     )
 

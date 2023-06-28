@@ -41,7 +41,6 @@ const postList = post ?  post.slice(-2).reverse().map((posts, index) => <PostCar
 
     return ( 
         <>
-            <hr/>
 
             <div className="searchContainer">
             <input
@@ -56,8 +55,8 @@ const postList = post ?  post.slice(-2).reverse().map((posts, index) => <PostCar
                 <img className="cats" src={HomeImage} alt="Two kittens" /> 
             </div>
 
-            <hr />  
-            <p>Choose Your Pet Community</p>
+            
+            <p className="chooseTitle">Choose Your Pet Community</p>
             <div className="categories">
                 <div className="categoryDiv">
                     <Link to="/dog"> <img className="categoryImg" src={Dog} alt="Dog"/> </Link>
