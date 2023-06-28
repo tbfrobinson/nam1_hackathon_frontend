@@ -30,6 +30,9 @@
 p {
     text-align: center;
 }
+.chooseTitle {
+  margin-top: 10px;
+}
 
 .categories {
     display:flex;

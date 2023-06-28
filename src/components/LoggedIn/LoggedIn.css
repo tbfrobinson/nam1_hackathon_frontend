@@ -1,0 +1,14 @@
+.LogOutBtn {
+    margin-top: 15px;
+    background: #D9B8FF;
+    border: 0px;
+    border-radius: 12px;
+    color:white;
+    width: 10rem;
+    height: 2.8125rem;
+    flex-shrink: 0;
+}
+
+.myPostTitle {
+    margin-top: 10px;
+}

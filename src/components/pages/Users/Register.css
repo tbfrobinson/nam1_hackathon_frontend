@@ -31,5 +31,36 @@ input {
     margin:10px 10px;
     border-radius: 10px; 
     border: 1px solid black;
- 
   }
+
+.AuthSubmitBtn {
+    margin-top: 15px;
+    background: #D9B8FF;
+    border: 0px;
+    border-radius: 12px;
+    color:white;
+    width: 10rem;
+    height: 2.8125rem;
+    flex-shrink: 0;
+}
+
+.changeLogIn {
+    border: 0;
+    background-color:transparent;
+    font-size: small;
+}
+.LogInSpan {
+    text-decoration: underline;
+    color: #D9B8FF;
+}
+
+.changeSignUp {
+    border: 0;
+    background-color:transparent;
+    font-size: small;
+}
+
+.SignUpSpan {
+    text-decoration: underline;
+    color: #D9B8FF;
+}
