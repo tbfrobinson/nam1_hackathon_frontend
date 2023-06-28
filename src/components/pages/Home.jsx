@@ -36,7 +36,7 @@ export default function Home() {
     }, [])  //run on 1st render only
 
 // maps the last 2 post from newest to oldest
-const postList = post ?  post.slice(-2).reverse().map((posts, index) => <PostCard posts={posts} key={index} />) : ""
+const postList = post ?  post.slice(0,4).map((posts, index) => <PostCard posts={posts} key={index} />) : ""
 
 
     return ( 
