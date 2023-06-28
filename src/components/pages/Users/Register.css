@@ -38,7 +38,7 @@ input {
   }
 
 .AuthSubmitBtn {
-    margin-top: 55px;
+    margin-top: 60px;
     background: #D9B8FF;
     border: 0px;
     border-radius: 12px;
@@ -61,11 +61,13 @@ input {
 
 .changeLogIn {
     border: 0;
-    position: absolute;
+    /* position: absolute;
     font-size: 20px;
-    bottom: 260px; left: 50px;
+    bottom: 260px; left: 50px; */
     background-color:transparent;
     font-size: small;
+    position:relative;
+    top: -105px;
 }
 .LogInSpan {
     text-decoration: underline;
@@ -74,11 +76,13 @@ input {
 
 .changeSignUp {
     border: 0;
-    position: absolute;
+    /* position: absolute;
     font-size: 20px;
-    top: 238px; left: 50px;
+    top: 238px; left: 50px; */
     background-color:transparent;
     font-size: small;
+    position:relative;
+    top: -105px;
 }
 
 .SignUpSpan {

@@ -17,14 +17,39 @@
     border-radius: 30px;
     margin-top: 20px;
 }
+
+.trending {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 4vw;
+}
+@media screen and (min-width: 425px) {
+  .trending {
+     font-size: 17px;
+  }
+}
+.trendingTopic {
+  color:gray;
+  margin-left: 5px;
+}
 .homeImage {
+  display:flex;
+  justify-content: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+.homeImgBorder {
+  background-color: #D9B8FF6B;
+  border-radius: 8px;
+  margin: 0 10px;
 }
 .cats {
+    margin: 20px 0;
     width: 90%;
     border-radius: 8px;
-    max-width: 400px;
+    max-width: 450px;
     max-height: 300px;
 }
 

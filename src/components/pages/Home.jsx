@@ -10,6 +10,7 @@ import Dog from "../../img/dog-face.jpeg"
 import Cat from "../../img/cat-face.png"
 import Fish from "../../img/fish-face.webp"
 import Bird from "../../img/bird-face.jpeg"
+import Arrow from "../../img/Vector (2).png"
 
 export default function Home() {
 
@@ -51,8 +52,18 @@ const postList = post ?  post.slice(0,4).map((posts, index) => <PostCard posts={
                 value={searchInput} />
             </div> 
 
+            <div className="trending">
+                Trending Topics  
+                <span className="trendingTopic">Safe Food<img className="arrowImg" src={Arrow} alt=""/></span>   
+                <span className="trendingTopic">Exercise<img src={Arrow} alt=""/></span>   
+                <span className="trendingTopic">Daycare<img src={Arrow} alt=""/></span>
+            </div>
+
+
             <div className="homeImage">
-                <img className="cats" src={HomeImage} alt="Two kittens" /> 
+                <div className="homeImgBorder">
+                    <img className="cats" src={HomeImage} alt="Two kittens" /> 
+                </div>
             </div>
 
             
