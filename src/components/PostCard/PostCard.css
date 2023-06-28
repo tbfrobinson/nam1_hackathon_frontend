@@ -5,4 +5,32 @@
     background-color: #D9B8FF6B;
     width: 90%;
     border-radius: 8px;
+    max-width: 750px;
+    position: relative;
+}
+.favorite {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 5px;
+}
+.postContent {
+    margin-bottom: 0;
+}
+
+.messageIcon {
+    margin-left: 10px;
+}
+
+.likes {
+    float:left;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.timeAndDate {
+    color:rgb(172, 174, 177);
+    font-size:11px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 10px;
 }

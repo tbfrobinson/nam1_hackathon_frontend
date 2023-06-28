@@ -25,8 +25,33 @@ export default function FishPage() {
 const postCategory = post ? post.filter(posts => posts.petId.category === "Fish").map((posts, index) => <PostCard posts={posts} key={index} />) : ""
 //console.log(postCategory)
 
+
+
+const [searchInput, setSearchInput] = useState("")
+
+//update the value of searchInput 
+const handleChange = (e) => {
+    e.preventDefault();
+    setSearchInput(e.target.value)
+}
+
+
+
   return (
     <>
+
+
+
+<div className="searchContainer">
+            <input
+                className="searchBar"
+                type="search"
+                placeholder="Search here"
+                onChange={handleChange}
+                value={searchInput} />
+      </div> 
+
+
       <div className='communityTitle'> Fish </div>
      
       <div className='outerPostBox'>
