@@ -32,7 +32,6 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
   return (
     <>
     <div className="profileContainer"> 
-    <h1>Profile</h1>
         {currentUser ? <LoggedIn currentUser={currentUser} handleLogout={handleLogout}/> : loggedOut}
     </div>
     </>

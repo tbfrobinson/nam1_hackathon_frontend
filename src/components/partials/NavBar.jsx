@@ -6,7 +6,7 @@ import "./NavBar.css"
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
 //import images 
-import Logo from "../../img/logo.jpeg"
+import Logo from "../../img/PetParentLogo.png"
 import Profile from "../../img/user.png"
 import Hamburger from "../../img/hamburger.png"
 
@@ -20,7 +20,7 @@ export default function NavBar({currentUser, handleLogout}) {
 
     const loggedOut = (
         <div>
-            <Link to='/register' className="dpLink">Register</Link>
+            <Link to='/register' className="dpLink">Log In</Link>
         </div>
     )
 
@@ -41,7 +41,7 @@ export default function NavBar({currentUser, handleLogout}) {
                     <Dropdown.Item> {currentUser ? loggedIn : loggedOut } </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-            <Link to='/' className="title"> Pet Parents </Link>
+            <Link to='/' className="title"><img className='logo' src={Logo}></img></Link>
             <Link to="/profile"><img className = "profile" src = {Profile} alt = "Profile"/> </Link>
             {/* {currentUser ? loggedIn : loggedOut} */}
         </div>

@@ -1,3 +1,15 @@
+.communityTitle {
+  margin-top: 10px; margin-bottom: 15px;
+  text-align: center;
+  font-size: 35px;
+}
+.outerPostBox {
+  width: 94%;
+  padding-top: 15px;
+  background-color: rgb(250, 237, 255);
+  border-radius: 8px;
+  margin: 0 auto;
+}
 .catPostBox {
     display: flex;
     flex-direction: column;

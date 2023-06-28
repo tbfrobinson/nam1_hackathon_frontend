@@ -81,7 +81,11 @@ const postList = post ?  post.slice(0,4).map((posts, index) => <PostCard posts={
             <div className="recentTitle"> <h5>Recent Community Posts</h5> </div>
             <div className="createPost" style={{'text-align': 'center'}}>
                     <Link to="/post">
-                        CREATE A POST
+                        <div className="createButton">
+                            <p className='plus'>
+                                +
+                            </p>
+                        </div>
                     </Link>
                 </div>
             <div className="homePostBox">

@@ -1,7 +1,8 @@
 .postBox {
-    margin-top: 10px;
+    margin-bottom: -15px;
+    padding-top: 15px; padding-bottom: 0px;
     text-align: center;
     background-color: #D9B8FF6B;
-    width: 80%;
+    width: 90%;
     border-radius: 8px;
 }

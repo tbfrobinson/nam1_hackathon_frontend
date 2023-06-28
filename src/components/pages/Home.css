@@ -3,8 +3,8 @@
 }
 
 .searchBar {
-    height: 40px;
-    width:75%;
+    height: 35px;
+    width:80%;
     max-width: 550px;
     font-size: 14px;
     background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
@@ -14,11 +14,12 @@
     background-color: #fff;
     border: 1px solid #000;
     box-shadow: none;
-    border-radius: 10px;
+    border-radius: 30px;
+    margin-top: 20px;
 }
 .homeImage {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .cats {
     width: 90%;
@@ -81,4 +82,18 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.createButton {
+  height: 60px; width: 60px;
+  position: fixed;
+  right: 25px; bottom: 30px;
+  background-color: purple;
+  border-radius: 300px;
+  box-shadow: 0px 4px 9px 0 rgba(0, 0, 0, 0.8);
+}
+.plus {
+  text-align: center;
+  color: white;
+  font-size: 35px;
 }

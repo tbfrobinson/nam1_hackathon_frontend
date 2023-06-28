@@ -28,24 +28,42 @@
 
 input {
     padding:5px;
+    width: 140%;
+    height: 45px;
+    color: grey;
+    font-size: 16px;
     margin:10px 10px;
     border-radius: 10px; 
-    border: 1px solid black;
+    border: 1px solid rgb(26, 26, 26);
   }
 
 .AuthSubmitBtn {
-    margin-top: 15px;
+    margin-top: 55px;
     background: #D9B8FF;
     border: 0px;
     border-radius: 12px;
     color:white;
-    width: 10rem;
+    width: 140%;
     height: 2.8125rem;
     flex-shrink: 0;
 }
 
+.msgDiv {
+    height: 33px;
+}
+.msg {
+    color: red;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
 .changeLogIn {
     border: 0;
+    position: absolute;
+    font-size: 20px;
+    bottom: 260px; left: 50px;
     background-color:transparent;
     font-size: small;
 }
@@ -56,11 +74,14 @@ input {
 
 .changeSignUp {
     border: 0;
+    position: absolute;
+    font-size: 20px;
+    top: 238px; left: 50px;
     background-color:transparent;
     font-size: small;
 }
 
 .SignUpSpan {
     text-decoration: underline;
-    color: #D9B8FF;
+    color: #bd8ef2;
 }
